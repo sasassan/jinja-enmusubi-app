@@ -1,0 +1,223 @@
+html[data-season="spring"] {
+  --season-accent: #ffb7c5;
+  --season-secondary: #90c978;
+  --season-paper: #fff9f7;
+  --season-paper-alt: #fff0f5;
+  --season-surface: #fffdfc;
+  --season-surface-2: #fff5f7;
+  --season-backdrop: linear-gradient(145deg, #fff5f6, #fffaf2 55%, #f5faef);
+  --season-hero: linear-gradient(155deg, #ffe6ed, #fff4f3 55%, #f1f8eb);
+  --season-header: linear-gradient(110deg, #ad5a69, #bf6d78 55%, #718f63);
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --shu: #bd6275;
+  --shu-deep: #934659;
+  --shu-solid: #b65e70;
+  --shu-deep-solid: #934659;
+  --shu-accent: #b65e70;
+}
+
+html[data-season="summer"] {
+  --season-accent: #87ceeb;
+  --season-secondary: #6fae82;
+  --season-paper: #f3fbfd;
+  --season-paper-alt: #e7f6f8;
+  --season-surface: #fbfeff;
+  --season-surface-2: #edf8fa;
+  --season-backdrop: linear-gradient(155deg, #e7f7fb, #f5fbf8 52%, #f8fff4);
+  --season-hero: linear-gradient(155deg, #d9f1f6, #eff9f6 52%, #f5faed);
+  --season-header: linear-gradient(110deg, #367f91, #4a9caf 55%, #668e72);
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --shu: #397d90;
+  --shu-deep: #286172;
+  --shu-solid: #397f91;
+  --shu-deep-solid: #286172;
+  --shu-accent: #397f91;
+}
+
+html[data-season="autumn"] {
+  --season-accent: #c41e3a;
+  --season-secondary: #f8b400;
+  --season-paper: #fff8f0;
+  --season-paper-alt: #fff0df;
+  --season-surface: #fffdf9;
+  --season-surface-2: #fff4e8;
+  --season-backdrop: linear-gradient(145deg, #fff1e4, #fff9ef 48%, #f9eee5);
+  --season-hero: linear-gradient(155deg, #f7dfce, #fff1dd 50%, #f6e7d4);
+  --season-header: linear-gradient(110deg, #9b3c32, #c45a36 55%, #a77829);
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --shu: #b33835;
+  --shu-deep: #872923;
+  --shu-solid: #a93932;
+  --shu-deep-solid: #872923;
+  --shu-accent: #b33835;
+}
+
+html[data-season="winter"] {
+  --season-accent: #003366;
+  --season-secondary: #a8d1e7;
+  --season-paper: #f3f7fa;
+  --season-paper-alt: #e8f0f5;
+  --season-surface: #fcfdff;
+  --season-surface-2: #eef4f8;
+  --season-backdrop: linear-gradient(150deg, #e8f0f6, #f8fafc 56%, #edf3f7);
+  --season-hero: linear-gradient(155deg, #dce8f0, #edf3f6 56%, #e6edf2);
+  --season-header: linear-gradient(110deg, #163c63, #28577d 55%, #59768b);
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --shu: #28577d;
+  --shu-deep: #153b60;
+  --shu-solid: #28577d;
+  --shu-deep-solid: #153b60;
+  --shu-accent: #28577d;
+}
+
+html[data-season="newyear"] {
+  --season-accent: #b3262d;
+  --season-secondary: #d5a748;
+  --season-paper: #fff9f2;
+  --season-paper-alt: #fff0e9;
+  --season-surface: #fffefa;
+  --season-surface-2: #fff5ef;
+  --season-backdrop: linear-gradient(145deg, #fff1eb, #fffaf1 50%, #f6f5e8);
+  --season-hero: linear-gradient(155deg, #f3ded1, #fff4e8 52%, #f2eedf);
+  --season-header: linear-gradient(110deg, #a7252d, #c43a35 55%, #b88c3e);
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --shu: #b3262d;
+  --shu-deep: #8f1f26;
+  --shu-solid: #b3262d;
+  --shu-deep-solid: #8f1f26;
+  --shu-accent: #b3262d;
+}
+
+html[data-season][data-theme="dark"] {
+  --season-paper: #1a1b2b;
+  --season-paper-alt: #232438;
+  --season-surface: #25263a;
+  --season-surface-2: #2d2e43;
+  --paper: var(--season-paper);
+  --paper-alt: var(--season-paper-alt);
+  --surface: var(--season-surface);
+  --surface-2: var(--season-surface-2);
+  --season-backdrop: linear-gradient(145deg, #171c2c, #202231 55%, #1c2528);
+  --season-hero: linear-gradient(145deg, #242738, #292938 55%, #212a2b);
+  --line: #515265;
+  --line-soft: #3e4053;
+  --ink: #f3eee5;
+  --ink-soft: #e1d9cc;
+  --muted: #c0b9ae;
+  --shu-tint: color-mix(in srgb, var(--season-accent) 18%, transparent);
+  --shu-soft: color-mix(in srgb, var(--season-accent) 24%, #25263a);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .22);
+  --shadow-md: 0 12px 28px -10px rgba(0, 0, 0, .42);
+  --shadow-lg: 0 24px 48px -16px rgba(0, 0, 0, .5);
+}
+
+html[data-season="spring"][data-theme="dark"] { --season-accent: #ffc0cf; --season-secondary: #9fd18a; --shu: #ffc0cf; --shu-deep: #ffd7df; --shu-solid: #8e5364; --shu-deep-solid: #744253; --shu-accent: #ffc0cf; }
+html[data-season="summer"][data-theme="dark"] { --season-accent: #87ceeb; --season-secondary: #85bd96; --shu: #87ceeb; --shu-deep: #b4e6f2; --shu-solid: #356e83; --shu-deep-solid: #28586c; --shu-accent: #87ceeb; }
+html[data-season="autumn"][data-theme="dark"] { --season-accent: #e66576; --season-secondary: #f8b400; --shu: #f08b79; --shu-deep: #ffc0a4; --shu-solid: #873a3b; --shu-deep-solid: #6d2c32; --shu-accent: #f08b79; }
+html[data-season="winter"][data-theme="dark"] { --season-accent: #8fc5e6; --season-secondary: #bed9e8; --shu: #8fc5e6; --shu-deep: #c6e3f4; --shu-solid: #254b70; --shu-deep-solid: #1d3d5e; --shu-accent: #8fc5e6; }
+html[data-season="newyear"][data-theme="dark"] { --season-accent: #ef8c84; --season-secondary: #e1bd64; --shu: #ef8c84; --shu-deep: #ffc1ad; --shu-solid: #8d3437; --shu-deep-solid: #70282f; --shu-accent: #ef8c84; }
+
+html[data-season] body {
+  background-color: var(--paper);
+  background-image: var(--season-backdrop), radial-gradient(rgba(201, 168, 76, .045) .7px, transparent .7px);
+  background-size: auto, 12px 12px;
+}
+html[data-season][data-theme="dark"] body { background-image: var(--season-backdrop), radial-gradient(rgba(229, 205, 139, .07) .7px, transparent .7px); }
+html[data-season] .site-header { background: var(--season-header); }
+html[data-season="spring"] .site-header::before { width: 90px; height: 55px; right: 62px; top: 4px; background-image: url("/decorations/seasons/spring-branch.svg"); }
+html[data-season="spring"] .site-header::after { background-image: url("/decorations/sakura-petal.svg"); }
+html[data-season="summer"] .site-header::before { width: 34px; height: 50px; right: 75px; top: 5px; background-image: url("/decorations/seasons/summer-windchime.svg"); transform-origin: 50% 0; animation: summer-chime-sway 4s ease-in-out infinite; }
+html[data-season="summer"] .site-header::after { width: 48px; height: 28px; right: 31px; bottom: 12px; background-image: url("/decorations/seasons/summer-ripple.svg"); }
+html[data-season="autumn"] .site-header::before { width: 88px; height: 54px; right: 59px; top: 5px; background-image: url("/decorations/seasons/autumn-maple-branch.svg"); }
+html[data-season="autumn"] .site-header::after { background-image: url("/decorations/seasons/autumn-maple-leaf.svg"); }
+html[data-season="winter"] .site-header::before { width: 36px; height: 36px; right: 76px; top: 13px; background-image: url("/decorations/seasons/winter-snowflake.svg"); }
+html[data-season="winter"] .site-header::after { background-image: url("/decorations/seasons/winter-snowflake.svg"); }
+html[data-season="newyear"] .site-header::before { width: 48px; height: 58px; right: 68px; top: 4px; background-image: url("/decorations/seasons/newyear-kadomatsu.svg"); }
+html[data-season="newyear"] .site-header::after { width: 34px; height: 34px; right: 32px; bottom: 9px; background-image: url("/decorations/seasons/newyear-kagami-mochi.svg"); }
+
+html[data-season] .hero:not(.home-hero) {
+  background: var(--season-hero);
+  border-color: color-mix(in srgb, var(--season-accent) 24%, transparent);
+}
+html[data-season] .home-hero {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--season-secondary) 25%, rgba(32, 40, 29, .78)), rgba(26, 35, 27, .25)),
+    linear-gradient(0deg, rgba(15, 20, 35, .38), transparent 60%),
+    url("/images/shrine-approach.webp") center 55% / cover no-repeat;
+}
+html[data-season="spring"] .hero::before,
+html[data-season="autumn"] .hero::before,
+html[data-season="newyear"] .hero::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  width: 100px;
+  height: 70px;
+  opacity: .25;
+  background: url("/decorations/seasons/spring-branch.svg") center / contain no-repeat;
+  pointer-events: none;
+}
+html[data-season="autumn"] .hero::before { background-image: url("/decorations/seasons/autumn-maple-branch.svg"); }
+html[data-season="newyear"] .hero::before { background-image: url("/decorations/seasons/newyear-kadomatsu.svg"); }
+html[data-season="newyear"] body::before,
+html[data-season="newyear"] body::after {
+  content: "";
+  position: fixed;
+  bottom: 16px;
+  z-index: 0;
+  width: 84px;
+  height: 104px;
+  opacity: .32;
+  background: url("/decorations/seasons/newyear-kadomatsu.svg") center / contain no-repeat;
+  pointer-events: none;
+}
+html[data-season="newyear"] body::before { left: 12px; }
+html[data-season="newyear"] body::after { right: 12px; width: 74px; background-image: url("/decorations/seasons/newyear-kagami-mochi.svg"); }
+.newyear-banner {
+  position: relative;
+  z-index: 31;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8px 14px;
+  color: #fffaf0;
+  background: linear-gradient(90deg, #a7252d, #d19b3c 50%, #a7252d);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.newyear-banner span { padding-inline: 8px; }
+.season-atmosphere { position: fixed; inset: 0; z-index: 20; overflow: hidden; pointer-events: none; }
+.season-particle { position: absolute; top: -9vh; width: 17px; height: 17px; opacity: .55; will-change: transform, opacity; animation: season-float 14s linear infinite; }
+.season-atmosphere--spring .season-particle { width: 14px; height: 11px; background: url("/decorations/sakura-petal.svg") center / contain no-repeat; }
+.season-atmosphere--autumn .season-particle { width: 19px; height: 19px; background: url("/decorations/seasons/autumn-maple-leaf.svg") center / contain no-repeat; }
+.season-atmosphere--winter .season-particle { width: 13px; height: 13px; background: url("/decorations/seasons/winter-snowflake.svg") center / contain no-repeat; }
+.season-atmosphere--summer .season-particle { width: 8px; height: 8px; border: 1px solid rgba(76, 170, 192, .5); border-radius: 50%; box-shadow: 0 0 12px rgba(92, 196, 209, .35); }
+.season-atmosphere--newyear .season-particle { display: none; }
+@keyframes season-float {
+  0% { transform: translate3d(0, -4vh, 0) rotate(0); opacity: 0; }
+  12% { opacity: .55; }
+  86% { opacity: .42; }
+  100% { transform: translate3d(7vw, 115vh, 0) rotate(270deg); opacity: 0; }
+}
+@keyframes summer-chime-sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .season-particle { animation: none; opacity: .22; }
+  html[data-season="summer"] .site-header::before { animation: none; }
+}

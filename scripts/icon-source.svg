@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#f8f5ec" />
+  <g fill="#c1440e">
+    <!-- kasagi: top lintel with slightly raised ends -->
+    <path d="M132 150 C132 141 139 134 148 134 L364 134 C373 134 380 141 380 150 L380 172 C380 181 373 188 364 188 L148 188 C139 188 132 181 132 172 Z" />
+    <!-- small raised tips at the ends of kasagi -->
+    <path d="M120 142 L150 134 L150 160 L124 168 Z" />
+    <path d="M392 142 L362 134 L362 160 L388 168 Z" />
+    <!-- shimaki: second beam just below kasagi -->
+    <rect x="150" y="196" width="212" height="24" rx="6" />
+    <!-- gakuzuka: central post connecting shimaki to nuki -->
+    <rect x="246" y="220" width="20" height="86" rx="4" />
+    <!-- nuki: lower tie beam -->
+    <rect x="170" y="292" width="172" height="22" rx="6" />
+    <!-- left pillar -->
+    <rect x="172" y="200" width="30" height="212" rx="6" />
+    <!-- right pillar -->
+    <rect x="310" y="200" width="30" height="212" rx="6" />
+  </g>
+</svg>

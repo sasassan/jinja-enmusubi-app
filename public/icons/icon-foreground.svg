@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g transform="translate(46 46) scale(.82)">
+    <g stroke="#FFB7C5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M107 159c47-8 97-29 141-64 37-29 69-37 112-37" fill="none" stroke-width="8"/>
+      <path d="M153 136c-25-14-34-33-26-47 8-12 27-9 42 5 12 11 16 28 11 42m68-41c-22-22-24-43-12-53 13-10 30 0 40 17 8 14 7 31-2 43m50-36c-11-24-7-43 8-49 15-5 27 9 30 29 3 16-4 31-16 39" fill="#FFB7C5" stroke-width="7"/>
+      <path d="M118 104l30 37m91-99 22 49m63-43 18 51" stroke="#D4483A" stroke-opacity=".4" stroke-width="4"/>
+    </g>
+    <g fill="#FFB7C5" stroke="#FFF8F0" stroke-width="4">
+      <path d="M121 71c6-15 22-15 27 0 15-5 25 8 16 20 12 11 5 26-10 25-5 15-22 15-27 0-15 5-25-8-16-20-12-11-5-26 10-25Z"/>
+      <path d="M235 24c6-15 22-15 27 0 15-5 25 8 16 20 12 11 5 26-10 25-5 15-22 15-27 0-15 5-25-8-16-20-12-11-5-26 10-25Z"/>
+      <path d="M341 17c6-15 22-15 27 0 15-5 25 8 16 20 12 11 5 26-10 25-5 15-22 15-27 0-15 5-25-8-16-20-12-11-5-26 10-25Z"/>
+      <path d="M179 96c4-11 16-11 20 0 11-4 18 6 11 15 9 8 4 19-8 18-4 11-16 11-20 0-11 4-18-6-11-15-9-8-4-19 8-18Z"/>
+    </g>
+    <g fill="#C9A84C"><circle cx="137" cy="92" r="5"/><circle cx="251" cy="45" r="5"/><circle cx="357" cy="38" r="5"/><circle cx="190" cy="113" r="4"/></g>
+    <g fill="#D4483A" stroke="#9E2B24" stroke-linejoin="round" stroke-width="3">
+      <path d="M94 163c30-19 74-29 162-29s132 10 162 29l-13 23c-36-11-82-17-149-17s-113 6-149 17z"/>
+      <path d="M126 196h260v24H126zM147 220h30v194h-30zM335 220h30v194h-30zM177 222h28v100h-28zM307 222h28v100h-28zM119 405h274v17H119z"/>
+    </g>
+    <g fill="none" stroke="#C9A84C" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M194 247c27 8 47 12 62 12s35-4 62-12" stroke-width="9"/>
+      <path d="M194 255c27 8 47 12 62 12s35-4 62-12" stroke="#F0D98E" stroke-width="3"/>
+      <path d="M222 251c8-8 15-8 22 0s14 8 22 0 15-8 24 0" stroke-width="4"/>
+      <path d="M230 264v22l-9 12 9 11 9-11v-32m29 0v32l9 11 9-11-9-12v-22" stroke-width="5"/>
+    </g>
+  </g>
+</svg>

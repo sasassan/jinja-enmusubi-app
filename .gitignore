@@ -1,0 +1,7 @@
+node_modules
+.next
+/out
+.env.local
+*.tsbuildinfo
+/public/sw.js
+/public/precache-manifest.json
