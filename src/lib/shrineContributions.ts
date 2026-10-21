@@ -22,7 +22,7 @@ export type ShrineContribution = {
   contributionType: ContributionType;
   content: string;
   sourceImagePath: string | null;
-  status: "published" | "hidden";
+  status: "pending" | "published" | "hidden";
   createdAt: string;
   updatedAt: string;
 };
@@ -34,7 +34,7 @@ type ContributionRow = {
   contribution_type: ContributionType;
   content: string;
   source_image_path: string | null;
-  status: "published" | "hidden";
+  status: "pending" | "published" | "hidden";
   created_at: string;
   updated_at: string;
 };
@@ -117,6 +117,7 @@ export async function createShrineContribution(input: {
     contribution_type: input.contributionType,
     content,
     source_image_path: sourceImagePath,
+    status: "pending",
   }).select("id, shrine_id, user_id, contribution_type, content, source_image_path, status, created_at, updated_at").single();
 
   if (error) {
