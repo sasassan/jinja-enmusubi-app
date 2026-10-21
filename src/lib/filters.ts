@@ -48,7 +48,9 @@ export type ShrineWithDistance = { shrine: Shrine; distanceKm: number | null };
 export function withDistance(shrines: Shrine[], geo: GeoState): ShrineWithDistance[] {
   return shrines.map((s) => ({
     shrine: s,
-    distanceKm: geo.status === "granted" ? haversineKm(geo.lat, geo.lng, s.latitude, s.longitude) : null,
+    distanceKm: geo.status === "granted" && s.latitude != null && s.longitude != null
+      ? haversineKm(geo.lat, geo.lng, s.latitude, s.longitude)
+      : null,
   }));
 }
 
