@@ -88,7 +88,7 @@ export function AdminClientLayout({ children }: { children: React.ReactNode }) {
   if (isLoading || (user && allowed === null)) return <p className="admin-note" role="status">管理者権限を確認しています…</p>;
   if (!user) return <div className="admin-unauthorized"><h1>管理画面</h1><p>管理画面にアクセスするにはログインが必要です。</p><div className="admin-actions"><Link href="/login?redirect=/admin" className="admin-button">ログイン</Link><Link href="/" className="admin-button secondary">トップへ戻る</Link></div></div>;
   if (!allowed) return <div className="admin-unauthorized"><h1>アクセス権限がありません</h1><p>このアカウントには管理画面へのアクセス権が設定されていません。</p><Link href="/" className="admin-button">神社を探す</Link></div>;
-  const links = [["/admin", "ダッシュボード"], ["/admin/shrines", "神社"], ["/admin/deities", "神様"], ["/admin/figures", "人物"], ["/admin/lineages", "系統"], ["/admin/benefits", "御利益"], ["/admin/sources", "情報源"]];
+  const links = [["/admin", "ダッシュボード"], ["/admin/contributions", "投稿審査"], ["/admin/shrines", "神社"], ["/admin/deities", "神様"], ["/admin/figures", "人物"], ["/admin/lineages", "系統"], ["/admin/benefits", "御利益"], ["/admin/sources", "情報源"]];
   return <div className="admin-shell"><aside className="admin-sidebar" aria-label="管理画面ナビゲーション"><div className="admin-sidebar-header"><Link href="/admin" className="admin-logo">神社御縁<span>管理画面</span></Link></div><nav>{links.map(([href, label]) => <Link key={href} href={href} className="admin-nav-link">{label}</Link>)}</nav><div className="admin-sidebar-footer"><p className="admin-user">{user.email}</p><Link href="/" className="admin-nav-link">サイトトップへ</Link></div></aside><main className="admin-main"><p className="admin-ethics-note" role="note">情報は実在確認と出典を併記し、由緒・御利益は伝承・信仰として記述してください。効能を断定せず、未確認情報は公開しないでください。</p>{children}</main></div>;
 }
 
