@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const sections = [
+  { href: "/admin/contributions", label: "投稿審査", desc: "ユーザー投稿の承認・公開・非公開を管理" },
   { href: "/admin/shrines", label: "神社", desc: "神社データの作成・編集・削除、御祭神・系統・御利益・出典の紐付け" },
   { href: "/admin/deities", label: "神様", desc: "神様データの作成・編集・削除" },
   { href: "/admin/figures", label: "人物", desc: "歴史的人物データの作成・編集・削除" },
