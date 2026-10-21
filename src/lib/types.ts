@@ -54,8 +54,8 @@ export type Shrine = {
   deities: string[];
   lineages: string[];
   benefits: string[];
-  latitude: number;
-  longitude: number;
+  latitude: number | null;
+  longitude: number | null;
   history: string;
   founded: string;
   nameOrigin: string;
