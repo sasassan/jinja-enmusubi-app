@@ -16,15 +16,21 @@ const EMPTY_SITE_DATA: SiteData = {
 export function useClientSiteData() {
   const [siteData, setSiteData] = useState<SiteData>(EMPTY_SITE_DATA);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [reloadToken, setReloadToken] = useState(0);
 
   useEffect(() => {
     let active = true;
     getSiteData()
       .then((data) => {
-        if (active) setSiteData(data);
+        if (!active) return;
+        setSiteData(data);
+        setError(data.source === "fallback" ? "神社データを取得できませんでした。通信環境を確認して再試行してください。" : null);
       })
       .catch(() => {
-        if (active) setSiteData(EMPTY_SITE_DATA);
+        if (!active) return;
+        setSiteData(EMPTY_SITE_DATA);
+        setError("神社データの読み込みに失敗しました。");
       })
       .finally(() => {
         if (active) setIsLoading(false);
@@ -32,7 +38,13 @@ export function useClientSiteData() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [reloadToken]);
 
-  return { ...siteData, isLoading };
+  const retry = () => {
+    setIsLoading(true);
+    setError(null);
+    setReloadToken((value) => value + 1);
+  };
+
+  return { ...siteData, isLoading, error, retry };
 }
