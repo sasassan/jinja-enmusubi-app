@@ -3,25 +3,26 @@
 import { useEffect } from "react";
 
 /**
- * Service Worker 登録用のクライアントコンポーネント。
- * layout.tsx から一度だけマウントし、対応ブラウザでのみ /sw.js を登録する。
+ * Register the PWA service worker after page load.
+ * Remove the pending load listener if the component unmounts first.
  */
 export function ServiceWorkerRegister() {
   useEffect(() => {
-    if (typeof window === "undefined") return;
     if (!("serviceWorker" in navigator)) return;
 
     const register = () => {
       navigator.serviceWorker.register("/sw.js").catch(() => {
-        /* SW 登録失敗時もアプリ本体の動作は継続させる */
+        // The app remains usable when service worker registration fails.
       });
     };
 
     if (document.readyState === "complete") {
       register();
-    } else {
-      window.addEventListener("load", register, { once: true });
+      return;
     }
+
+    window.addEventListener("load", register, { once: true });
+    return () => window.removeEventListener("load", register);
   }, []);
 
   return null;
