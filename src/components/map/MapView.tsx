@@ -106,15 +106,17 @@ export default function MapView({
     () => shrines.find((s) => s.shrine.slug === focusSlug)?.shrine ?? null,
     [shrines, focusSlug]
   );
-  const focusPosition: [number, number] | null = focusShrine
+  const focusPosition: [number, number] | null = focusShrine && focusShrine.latitude != null && focusShrine.longitude != null
     ? [focusShrine.latitude, focusShrine.longitude]
     : null;
   const resultPositions = useMemo(
-    () => shrines.map(({ shrine }) => [shrine.latitude, shrine.longitude] as [number, number]),
+    () => shrines.filter(({ shrine }) => shrine.latitude != null && shrine.longitude != null)
+      .map(({ shrine }) => [shrine.latitude!, shrine.longitude!] as [number, number]),
     [shrines]
   );
   const markers = useMemo(
-    () => shrines.map(({ shrine, distanceKm }) => ({
+    () => shrines.filter(({ shrine }) => shrine.latitude != null && shrine.longitude != null)
+      .map(({ shrine, distanceKm }) => ({
       shrine,
       distanceKm,
       icon: shrinePinIcon(shrine.slug === focusSlug || highlightResults, shrine.name),
@@ -148,7 +150,7 @@ export default function MapView({
           {markers.map(({ shrine, distanceKm, icon }) => (
             <Marker
               key={shrine.id}
-              position={[shrine.latitude, shrine.longitude]}
+              position={[shrine.latitude!, shrine.longitude!]}
               icon={icon}
               keyboard
               alt={shrine.name}
