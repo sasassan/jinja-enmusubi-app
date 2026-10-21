@@ -72,8 +72,7 @@ type RawFigureRow = {
   slug: string;
 };
 
-function mapShrine(row: RawShrineRow): Shrine | null {
-  if (row.latitude == null || row.longitude == null) return null;
+function mapShrine(row: RawShrineRow): Shrine {
 
   const deityRefs = (row.shrine_deities ?? [])
     .filter((d) => d.deities)
@@ -248,7 +247,7 @@ export async function getSiteData(): Promise<SiteData> {
       }),
     ]);
 
-    const shrines = shrineRows.map(mapShrine).filter((s): s is Shrine => s !== null);
+    const shrines = shrineRows.map(mapShrine);
 
     if (shrines.length === 0) return fallback();
 
