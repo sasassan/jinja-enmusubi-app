@@ -654,17 +654,23 @@ export default function ShrineExplorer({
             )}
 
             <div className="sheet-actions">
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${selected.latitude},${selected.longitude}`}
-                target="_blank"
-                rel="noreferrer"
-                className="primary-button"
-              >
-                ここへ行く
-              </a>
-              <Link href={`/map?focus=${selected.slug}`} className="outline-button">
-                地図で見る
-              </Link>
+              {selected.latitude != null && selected.longitude != null ? (
+                <>
+                  <a
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${selected.latitude},${selected.longitude}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="primary-button"
+                  >
+                    ここへ行く
+                  </a>
+                  <Link href={`/map?focus=${encodeURIComponent(selected.slug)}`} className="outline-button">
+                    地図で見る
+                  </Link>
+                </>
+              ) : (
+                <p className="unknown-value">位置情報が未登録のため、地図案内は利用できません。</p>
+              )}
               <button
                 className={favorites.includes(selected.id) ? "outline-button active" : "outline-button"}
                 onClick={() => toggleFavorite(selected.id)}
